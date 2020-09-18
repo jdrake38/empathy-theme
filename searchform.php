@@ -9,7 +9,7 @@
 <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
 
     <label>
-        <span class="search-label" for="search"><?php echo _x( 'Search for:', 'label', 'platetheme' ) ?></span>
+        <span class="search-label" for="search"><?php echo _x( '', 'label', 'platetheme' ) ?></span>
     </label>
 
     <div class="search-input">

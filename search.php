@@ -6,7 +6,7 @@
 
 			<main id="main" class="main" role="main">
 
-				<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'platetheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+				<h1 class="archive-title"><span><?php _e( '', 'platetheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -14,11 +14,11 @@
 
 						<header class="entry-header article-header">
 
-                            <h3 class="search-title entry-title">
-
-                            <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-
-                            </h3>
+						<h1 class="page-title" itemprop="headline">
+		
+						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+		
+						</h1>
                             
           					<?php get_template_part( 'templates/byline'); ?>
 

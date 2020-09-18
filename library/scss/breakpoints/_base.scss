@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: Empathy Bytes
+Author: Jaewon Drake
 
 Stylesheet: Base Stylesheet
 
@@ -24,7 +24,7 @@ html {
 }
 
 body {
-    color: #333333;
+    color: darken($empathy-gray,25%);
     font-size: 100%;
     font-family: $sans;
     line-height: 1.5;
@@ -51,6 +51,20 @@ pre {
 /*********************
 LAYOUT & GRID STYLES
 *********************/
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $empathy-gray;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.vr {
+    border-left: 1px solid $empathy-gray;
+    position: absolute;
+    height: 100%;
+}
 
 .wrap {}
 
@@ -59,10 +73,11 @@ LINK STYLES
 *********************/
 
 a, a:visited {
-    text-decoration: none;
+    text-decoration: bold;
+    color: $empathy-blue;
     /* on hover */
     &:hover, &:focus {
-        text-decoration: underline;
+        text-decoration: none;
     }
 
     /* on click */
@@ -101,7 +116,7 @@ further. Using correct headings helps with readability, SEO, and accessibility.
 /* Heading defaults */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     margin: 0;
-    color: lighten($sb-black, 12%);
+    color: darken($empathy-gray, 25%);
     font-weight: 500;
     line-height: 1.2;
     text-rendering: optimizelegibility;
@@ -125,8 +140,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 h1, .h1 {
     margin-top: 0;
-    // margin-bottom: 0.319em;
-    font-size: 3.157em;
+    margin-bottom: 0.319em;
+    font-size: 1.6em;
 }
 
 h2, .h2 {
@@ -135,11 +150,11 @@ h2, .h2 {
 }
 
 h3, .h3 {
-    font-size: 1.777em;
+    font-size: 1.7em;
 }
 
 h4, .h4 {
-    font-size: 1.333em;
+    font-size: 1.3em;
 }
 
 h5, .h5 {
@@ -156,7 +171,11 @@ HEADER STYLES
 *********************/
 
 .header {
-    background: #efefef;
+    background: $empathy-blue;
+    font: small-caps 16px Georgia;
+    a {
+        color: lighten($empathy-blue, 80%);
+    }
 }
 
 // fix for new header.php schema layout
@@ -166,10 +185,10 @@ HEADER STYLES
 
 #site-title {
     margin: 0 0.5em 0 0;
-    font-size: 2em;
+    font-size: 0em;
     line-height: inherit;
     a {
-        color: lighten($sb-black, 12%);
+        color: lighten($empathy-gray, 40%);
     }
 }
 
@@ -178,11 +197,11 @@ HEADER STYLES
 }
 
 #logo {
-    margin-right: 8px;
+    margin-right: 4px;
     img {
         // replace /library/images/logo.svg and adjust for your logo size
-        width: 50px;
-        height: 50px;
+        width: 48px;
+        height: 48px;
     }
 }
 
@@ -375,7 +394,14 @@ POSTS & CONTENT STYLES
 
 .single-title {}
 
-.page-title {}
+.page-title {
+    a {
+        color: darken($empathy-gray, 25%);
+        &:hover, &:focus {
+            color: $empathy-gray;
+        }
+    }
+}
 
 .entry-title {}
 
@@ -399,7 +425,7 @@ POSTS & CONTENT STYLES
 
 /* post meta */
 .byline-wrap {
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
     .byline {
         time {}
     }
@@ -408,6 +434,9 @@ POSTS & CONTENT STYLES
 
 /* entry content */
 .entry-content {
+    .excerpt {
+        margin-left: 1em;
+    }
     p {}
 
     ul, ol, table, dl {}
@@ -425,7 +454,7 @@ POSTS & CONTENT STYLES
     }
 
     table {
-        margin-bottom: 1.5em;
+        margin-bottom: 0.5em;
         width: 100%;
         border: 1px solid #ccc;
 
@@ -469,7 +498,104 @@ POSTS & CONTENT STYLES
 
     dd {}
 
-    img {}
+    img {
+        max-height: 9em;
+    }
+
+    /*
+    image alignment on a screen this size may be
+    a bit difficult. It's set to start aligning
+    and floating images at the next breakpoint,
+    but it's up to you. Feel free to change it up.
+    */
+    .alignleft, img.alignleft {}
+
+    .alignright, img.alignright {}
+
+    .aligncenter, img.aligncenter {}
+
+    .size-auto,
+    .size-full,
+    .size-large,
+    .size-medium,
+    .size-thumbnail {}
+
+    pre {}
+
+    code {}
+    
+} /* end .entry-content */
+
+/* index entry content */
+.index-entry-content {
+    display:flex;
+    .excerpt {
+        margin-left: 1em;
+    }
+    p {}
+
+    ul, ol, table, dl {}
+
+    ul, ol {
+        li {}
+    }
+
+    ul {
+        li {}
+    }
+
+    ol {
+        li {}
+    }
+
+    table {
+        margin-bottom: 0.5em;
+        width: 100%;
+        border: 1px solid #ccc;
+
+        caption {}
+    }
+
+    tr {
+        border-bottom: 1px solid #ccc;
+
+        &:nth-child(even) {
+            background-color: #dedede;
+        }
+    }
+
+    td {
+        padding: 7px;
+        border-right: 1px solid #ccc;
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    th {
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        background-color: #dedede;
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    blockquote p {
+        &:before {}
+    }
+
+    dl {}
+
+    dt {}
+
+    dd {}
+
+    img {
+        max-height: 9em;
+    }
 
     /*
     image alignment on a screen this size may be
@@ -622,7 +748,7 @@ COMMENT STYLES
 }
 
 .comment {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     padding-bottom: 1rem;
     border-bottom: 1px dotted #ccc;
     .comment-author {
@@ -759,7 +885,17 @@ SIDEBARS & ASIDES
 
 aside {}
 
-.sidebar {}
+.sidebar {
+    .search-input {
+        .search-field {
+            width: 50%;
+            margin-right: 0.25em;
+        }
+        display: flex;
+        width: 100%;
+        padding-bottom: 1em;
+    }
+}
 
 .widgettitle {}
 
@@ -786,12 +922,21 @@ FOOTER STYLES
 
 .footer {
     clear: both; // are you really still using floats? Tsk, tsk.
+    background-color: $empathy-blue;
+    font: small-caps 16px Georgia;   
+    color: lighten($empathy-blue, 80%);
 }
 
 .footer-links {
     ul {
         li {}
     }
+}
+
+.footer-category {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
 }
 
 .copyright {}

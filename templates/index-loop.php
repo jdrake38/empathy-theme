@@ -23,25 +23,35 @@
 
 		<header class="article-header">
 
-            <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+			<h1 class="page-title" itemprop="headline">
+		
+			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+			
+			</h1>
 			
 			<?php get_template_part( 'templates/byline'); ?>
 
 		</header>
 
-		<section class="entry-content">
+		<section class="index-entry-content">
 									
-			<?php the_content(); ?>
+			<?php the_post_thumbnail(); ?>
+
+			<section class="excerpt">
+
+				<?php echo wp_trim_words( get_the_content(), 45, '...' ); ?>
+
+			</section>
 
 		</section>
 
 		<footer class="article-footer">
 
-			<?php get_template_part( 'templates/comment', 'count'); ?>
-
             <?php get_template_part( 'templates/category-tags'); ?>
 
 		</footer>
+
+		<hr/>
 
 	</article>
 
