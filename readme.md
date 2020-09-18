@@ -1,1 +1,1 @@
-# Empathy Theme by Jaewon Drake built on Plate by studio.bio
+# Empathy Theme by Jaewon Drake built on Plate
