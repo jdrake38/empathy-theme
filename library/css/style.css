@@ -776,11 +776,11 @@ more pure CSS Grid interpretation: https://github.com/joshuaiz/grate
 
   @media only screen and (min-width: 768px) {
     .grid-aside {
-      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-template-columns: repeat(10, minmax(0, 1fr));
       grid-template-rows: auto 1fr auto;
     }
     .grid-aside #header, .grid-aside #footer {
-      grid-column: span 12;
+      grid-column: span 10;
     }
     .grid-aside #content {
       grid-column: 1/8;
@@ -790,11 +790,11 @@ more pure CSS Grid interpretation: https://github.com/joshuaiz/grate
     }
 
     .grid-full {
-      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-template-columns: repeat(10, minmax(0, 1fr));
       grid-template-rows: auto 1fr auto;
     }
     .grid-full #header, .grid-full #footer {
-      grid-column: span 12;
+      grid-column: span 10;
     }
     .grid-full #content {
       grid-column: 1/-1;
@@ -808,11 +808,11 @@ more pure CSS Grid interpretation: https://github.com/joshuaiz/grate
       grid-column: 2/8;
     }
     .grid-aside aside {
-      grid-column: 8/12;
+      grid-column: 8/10;
     }
 
     .grid-full #content {
-      grid-column: 0/12;
+      grid-column: 0/10;
     }
   }
   @media only screen and (min-width: 1600px) {
@@ -820,11 +820,11 @@ more pure CSS Grid interpretation: https://github.com/joshuaiz/grate
       grid-column: 3/8;
     }
     .grid-aside aside {
-      grid-column: 8/11;
+      grid-column: 8/9;
     }
 
     .grid-full #content {
-      grid-column: 0/12;
+      grid-column: 0/10;
     }
   }
 }
@@ -1090,6 +1090,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body a {
+  color: #404040;
+  text-decoration: none;
+}
+body a:hover, body a:focus {
+  color: #808080;
+}
 
 img {
   display: block;
@@ -1199,24 +1206,23 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 2.369em;
+  font-size: 1.35em;
 }
 
 h3, .h3 {
-  font-size: 1.7em;
+  font-size: 1.2em;
 }
 
 h4, .h4 {
-  font-size: 1.3em;
+  font-size: 1.05em;
 }
 
 h5, .h5 {
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 h6, .h6 {
   text-transform: uppercase;
-  letter-spacing: 4.333px;
 }
 
 /*********************
@@ -1283,9 +1289,16 @@ ul, ol {
   padding-left: 0;
   list-style-type: none;
   display: flex;
+  text-decoration: none;
 }
 .page-numbers li {
   margin-right: 1em;
+}
+.page-numbers a {
+  color: #404040;
+}
+.page-numbers a:hover, .page-numbers a:focus {
+  color: #808080;
 }
 
 /*********************
@@ -1364,9 +1377,6 @@ POSTS & CONTENT STYLES
   but it's up to you. Feel free to change it up.
   */
 }
-.entry-content .excerpt {
-  margin-left: 1em;
-}
 .entry-content table {
   margin-bottom: 0.5em;
   width: 100%;
@@ -1394,7 +1404,7 @@ POSTS & CONTENT STYLES
   border-right: 0;
 }
 .entry-content img {
-  max-height: 9em;
+  max-height: 450px;
 }
 /* end .entry-content */
 /* index entry content */
@@ -1501,6 +1511,9 @@ COMMENT STYLES
 /* h3 comment title */
 #comments-title {
   /* number of comments span */
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 1.2em;
 }
 .commentlist {
   margin: 0;
@@ -1509,8 +1522,8 @@ COMMENT STYLES
 
 .comment {
   margin-bottom: 0.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px dotted #ccc;
+  padding-bottom: 1em;
+  border-bottom: 1px dotted #808080;
   /* vcard */
   /* end .commentlist .vcard */
   /* end children */
@@ -1520,8 +1533,14 @@ COMMENT STYLES
   display: flex;
   align-items: center;
 }
+.comment .vcard {
+  margin-top: 1em;
+}
 .comment .vcard .avatar {
   margin-right: 1rem;
+  border-radius: 50px;
+  max-height: 50px;
+  max-width: 50px;
 }
 .comment .children {
   /* variations */
@@ -1540,6 +1559,10 @@ COMMENT STYLES
 /**********************
 COMMENT FORM STYLES
 ***********************/
+#reply-title {
+  margin-top: 1em;
+}
+
 /* comment submit button */
 /* comment form title */
 /* cancel comment reply link */
@@ -1555,7 +1578,7 @@ SIDEBARS & ASIDES
   padding-bottom: 1em;
 }
 .sidebar .search-input .search-field {
-  width: 50%;
+  width: 100%;
   margin-right: 0.25em;
 }
 

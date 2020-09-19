@@ -29,6 +29,14 @@ body {
     font-family: $sans;
     line-height: 1.5;
 
+    a {
+        color: darken($empathy-gray, 25%);
+        &:hover, &:focus {
+            color: $empathy-gray;
+        }
+        text-decoration: none;
+    }
+
     // Adjust for your type
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -146,24 +154,24 @@ h1, .h1 {
 
 h2, .h2 {
     // margin-top: 0.88em;
-    font-size: 2.369em;
+    font-size: 1.35em;
 }
 
 h3, .h3 {
-    font-size: 1.7em;
+    font-size: 1.2em;
 }
 
 h4, .h4 {
-    font-size: 1.3em;
+    font-size: 1.05em;
 }
 
 h5, .h5 {
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 h6, .h6 {
     text-transform: uppercase;
-    letter-spacing: 4.333px;
+    //letter-spacing: 4.333px;
 }
 
 /*********************
@@ -176,6 +184,17 @@ HEADER STYLES
     a {
         color: lighten($empathy-blue, 80%);
     }
+    // .search-input {
+    //     .search-field {
+    //         width: 100%;
+    //         margin-right: 0.25em;
+    //     }
+    //     display: flex;
+    //     position: absolute;
+    //     padding-top: 0.75em;
+    //     width: 15em;
+    //     right: 12.5%;
+    // }
 }
 
 // fix for new header.php schema layout
@@ -237,8 +256,15 @@ ul, ol {
     padding-left: 0;
     list-style-type: none;
     display: flex;
+    text-decoration: none;
     li {
         margin-right: 1em;
+    }
+    a {
+        color: darken($empathy-gray, 25%);
+        &:hover, &:focus {
+            color: $empathy-gray;
+        }
     }
 }
 
@@ -434,9 +460,8 @@ POSTS & CONTENT STYLES
 
 /* entry content */
 .entry-content {
-    .excerpt {
-        margin-left: 1em;
-    }
+    .excerpt {}
+    
     p {}
 
     ul, ol, table, dl {}
@@ -499,7 +524,7 @@ POSTS & CONTENT STYLES
     dd {}
 
     img {
-        max-height: 9em;
+        max-height: 450px;
     }
 
     /*
@@ -733,6 +758,9 @@ COMMENT STYLES
 /* h3 comment title */
 #comments-title {
     /* number of comments span */
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-size: 1.2em;
     span {}
 }
 
@@ -749,8 +777,8 @@ COMMENT STYLES
 
 .comment {
     margin-bottom: 0.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px dotted #ccc;
+    padding-bottom: 1em;
+    border-bottom: 1px dotted $empathy-gray;
     .comment-author {
         display: flex;
         align-items: center;
@@ -758,6 +786,7 @@ COMMENT STYLES
 
     /* vcard */
     .vcard {
+        margin-top: 1em;
         cite.fn {
             a.url {}
         }
@@ -772,6 +801,9 @@ COMMENT STYLES
 
         .avatar {
             margin-right: 1rem;
+            border-radius: 50px;
+            max-height: 50px;
+            max-width: 50px;
         }
     } /* end .commentlist .vcard */
 
@@ -851,7 +883,9 @@ COMMENT FORM STYLES
 
 .comment-respond {}
 
-#reply-title {}
+#reply-title {
+    margin-top: 1em;
+}
 
 .logged-in-as {}
 
@@ -888,7 +922,7 @@ aside {}
 .sidebar {
     .search-input {
         .search-field {
-            width: 50%;
+            width: 100%;
             margin-right: 0.25em;
         }
         display: flex;

@@ -6,7 +6,7 @@
 
 			<main id="main" class="main" role="main">
 
-				<h1 class="archive-title"><span><?php _e( '', 'platetheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+				<h1 class="archive-title"><span><?php _e( '', 'platetheme' ); ?></span> </h1>
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -35,6 +35,8 @@
 							<?php get_template_part( 'templates/category-tags'); ?>
 
 						</footer> <!-- end article footer -->
+
+						<hr/>
 
 					</article>
 
