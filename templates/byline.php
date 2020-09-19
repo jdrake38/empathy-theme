@@ -30,7 +30,7 @@
 
     } else {
 
-        echo '<span class="posted-on">Posted on:' . plate_time_link() . '</span>';
+        echo '<span class="posted-on">' . plate_time_link() . '</span>';
 
     } ?>
 

@@ -1093,6 +1093,7 @@ body {
 body a {
   color: #404040;
   text-decoration: none;
+  transition: 0.5s;
 }
 body a:hover, body a:focus {
   color: #808080;
@@ -1235,6 +1236,9 @@ HEADER STYLES
 .header a {
   color: aliceblue;
 }
+.header a:hover, .header a:focus {
+  text-decoration: none;
+}
 
 #inner-header {
   display: flex;
@@ -1368,6 +1372,10 @@ POSTS & CONTENT STYLES
 .byline-wrap {
   margin-bottom: 0.5em;
 }
+.byline-wrap .byline time {
+  font-size: 0.9em;
+}
+
 /* entry content */
 .entry-content {
   /*

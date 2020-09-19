@@ -1,8 +1,8 @@
 /*------------------------------------
- * Theme: Plate by studio.bio 
+ * Theme: Empathy Theme by Jaewon Drake
  * File: Main theme scripts file
- * Author: Joshua Michaels
- * URI: https://studio.bio/themes/plate
+ * Author: Jaewon Drake
+ * URI: 
  *------------------------------------
  *
  * This file should contain any js scripts you want to add to the site.

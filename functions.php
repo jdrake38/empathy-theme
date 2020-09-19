@@ -592,7 +592,7 @@ function plate_filter_ptags_on_images( $content ) {
 }
 
 
-// Simple function to remove the [...] from excerpt and add a 'Read More »' link.
+// Simple function to remove the [...] from excerpt and add a 'Read More ï¿½' link.
 function plate_excerpt_more($more) {
     global $post;
     // edit here if you like
@@ -1119,9 +1119,9 @@ if ( ! function_exists( 'plate_time_link' ) ) :
  */
 function plate_time_link() {
 
-    $time_string = 'Posted on: <time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+    $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
     if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-      $time_string = 'Posted on: <time class="entry-date published" datetime="%1$s">%2$s</time> | Updated: <time class="updated" datetime="%3$s">%4$s</time>';
+      $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
     }
 
     $time_string = sprintf(

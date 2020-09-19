@@ -35,6 +35,12 @@ body {
             color: $empathy-gray;
         }
         text-decoration: none;
+        
+        -o-transition:.5s;
+        -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.5s;
     }
 
     // Adjust for your type
@@ -183,6 +189,9 @@ HEADER STYLES
     font: small-caps 16px Georgia;
     a {
         color: lighten($empathy-blue, 80%);
+        &:hover, &:focus {
+            text-decoration: none;
+        }
     }
     // .search-input {
     //     .search-field {
@@ -453,7 +462,9 @@ POSTS & CONTENT STYLES
 .byline-wrap {
     margin-bottom: 0.5em;
     .byline {
-        time {}
+        time {
+            font-size: 0.9em;
+        }
     }
 }
 

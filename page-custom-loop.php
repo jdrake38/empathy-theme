@@ -47,7 +47,7 @@
 
                                 echo '<span class="posted-on">' . plate_time_link() . '</span><span class="byline"> ' . $byline . '</span>';
 
-                                } else { echo '<span class="posted-on">Posted on:' . plate_time_link() . '</span>'; }
+                                } else { echo '<span class="posted-on">' . plate_time_link() . '</span>'; }
 
                                 ?>
                                 
