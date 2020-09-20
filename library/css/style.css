@@ -776,11 +776,11 @@ more pure CSS Grid interpretation: https://github.com/joshuaiz/grate
 
   @media only screen and (min-width: 768px) {
     .grid-aside {
-      grid-template-columns: repeat(10, minmax(0, 1fr));
+      grid-template-columns: repeat(12, minmax(0, 1fr));
       grid-template-rows: auto 1fr auto;
     }
     .grid-aside #header, .grid-aside #footer {
-      grid-column: span 10;
+      grid-column: span 12;
     }
     .grid-aside #content {
       grid-column: 1/8;
@@ -790,11 +790,11 @@ more pure CSS Grid interpretation: https://github.com/joshuaiz/grate
     }
 
     .grid-full {
-      grid-template-columns: repeat(10, minmax(0, 1fr));
+      grid-template-columns: repeat(12, minmax(0, 1fr));
       grid-template-rows: auto 1fr auto;
     }
     .grid-full #header, .grid-full #footer {
-      grid-column: span 10;
+      grid-column: span 12;
     }
     .grid-full #content {
       grid-column: 1/-1;
@@ -808,11 +808,11 @@ more pure CSS Grid interpretation: https://github.com/joshuaiz/grate
       grid-column: 2/8;
     }
     .grid-aside aside {
-      grid-column: 8/10;
+      grid-column: 8/12;
     }
 
     .grid-full #content {
-      grid-column: 0/10;
+      grid-column: 0/12;
     }
   }
   @media only screen and (min-width: 1600px) {
@@ -820,11 +820,11 @@ more pure CSS Grid interpretation: https://github.com/joshuaiz/grate
       grid-column: 3/8;
     }
     .grid-aside aside {
-      grid-column: 8/9;
+      grid-column: 8/11;
     }
 
     .grid-full #content {
-      grid-column: 0/10;
+      grid-column: 0/12;
     }
   }
 }

@@ -134,12 +134,12 @@ more pure CSS Grid interpretation: https://github.com/joshuaiz/grate
         
         .grid-aside {
             // create 12 equal columns of 1fr unit. Simple.
-            grid-template-columns: repeat(10, minmax(0, 1fr));
+            grid-template-columns: repeat(12, minmax(0, 1fr));
             // create 3 rows: header | content/aside | footer; 'auto' makes header and footer the height of the content
             grid-template-rows: auto 1fr auto;
             // make the header and footer span the full width
             #header, #footer {
-                grid-column: span 10;
+                grid-column: span 12;
             }
 
             // span our main content from columns 1-8 (8 is the start of the new column)
@@ -155,12 +155,12 @@ more pure CSS Grid interpretation: https://github.com/joshuaiz/grate
         // grid for full-width page
         .grid-full {
             // create 12 columns of 1fr unit. Simple.
-            grid-template-columns: repeat(10, minmax(0, 1fr));
+            grid-template-columns: repeat(12, minmax(0, 1fr));
             // create 3 rows: header | content/aside | footer; 'auto' makes header and footer the height of the content
             grid-template-rows: auto 1fr auto;
             // make the header and footer span the full width
             #header, #footer {
-                grid-column: span 10;
+                grid-column: span 12;
             }
             #content {
                 grid-column: 1/-1;
@@ -179,13 +179,13 @@ more pure CSS Grid interpretation: https://github.com/joshuaiz/grate
                 grid-column: 2/8;
             }
             aside {
-                grid-column: 8/10;
+                grid-column: 8/12;
             }
         }
 
         .grid-full {
             #content {
-                grid-column: 0/10;
+                grid-column: 0/12;
             }
         }
         
@@ -199,19 +199,17 @@ more pure CSS Grid interpretation: https://github.com/joshuaiz/grate
                 grid-column: 3/8;
             }
             aside {
-                grid-column: 8/9;
+                grid-column: 8/11;
             }
         }
 
         .grid-full {
             #content {
-                grid-column: 0/10;
+                grid-column: 0/12;
             }
         }
         
     } // end of media query
-
-    
 
 }
 
