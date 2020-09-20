@@ -1231,7 +1231,7 @@ HEADER STYLES
 *********************/
 .header {
   background: #003057;
-  font: small-caps 16px Georgia;
+  font: small-caps 16px "Georgia", Cambria, Times New Roman, Times, serif;
 }
 .header a {
   color: aliceblue;
@@ -1586,7 +1586,7 @@ SIDEBARS & ASIDES
   padding-bottom: 1em;
 }
 .sidebar .search-input .search-field {
-  width: 100%;
+  width: 50%;
   margin-right: 0.25em;
 }
 

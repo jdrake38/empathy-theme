@@ -186,7 +186,7 @@ HEADER STYLES
 
 .header {
     background: $empathy-blue;
-    font: small-caps 16px Georgia;
+    font: small-caps 16px $serif;
     a {
         color: lighten($empathy-blue, 80%);
         &:hover, &:focus {
@@ -933,7 +933,7 @@ aside {}
 .sidebar {
     .search-input {
         .search-field {
-            width: 100%;
+            width: 50%;
             margin-right: 0.25em;
         }
         display: flex;
