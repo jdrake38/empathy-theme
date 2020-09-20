@@ -1131,9 +1131,6 @@ hr {
 LINK STYLES
 *********************/
 a, a:visited {
-  -webkit-text-decoration: bold;
-          text-decoration: bold;
-  color: #003057;
   /* on hover */
   /* on click */
   /* mobile tap color */

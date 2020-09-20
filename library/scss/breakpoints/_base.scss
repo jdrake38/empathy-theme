@@ -87,8 +87,6 @@ LINK STYLES
 *********************/
 
 a, a:visited {
-    text-decoration: bold;
-    color: $empathy-blue;
     /* on hover */
     &:hover, &:focus {
         text-decoration: none;
