@@ -35,7 +35,7 @@ if ( post_password_required() ) {
           ?>
 
         </section>
-
+        <hr/>
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 
         	<nav class="navigation comment-navigation" role="navigation">

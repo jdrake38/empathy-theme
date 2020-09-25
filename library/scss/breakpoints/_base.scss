@@ -769,8 +769,6 @@ COMMENT STYLES
 /* h3 comment title */
 #comments-title {
     /* number of comments span */
-    margin-top: 2em;
-    margin-bottom: 1em;
     font-size: 1.2em;
     span {}
 }
@@ -788,13 +786,11 @@ COMMENT STYLES
 
 .comment {
     margin-bottom: 0.5rem;
-    padding-bottom: 1em;
-    border-bottom: 1px dotted $empathy-gray;
     .comment-author {
         display: flex;
         align-items: center;
     }
-
+    margin-left: 2em;
     /* vcard */
     .vcard {
         margin-top: 1em;
@@ -803,6 +799,8 @@ COMMENT STYLES
         }
 
         time {
+	    margin-left: 1rem;
+	    font-size: 0.75em;
             a {
                 &:hover {}
             }
