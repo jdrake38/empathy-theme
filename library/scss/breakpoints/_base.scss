@@ -534,6 +534,8 @@ POSTS & CONTENT STYLES
 
     img {
         max-height: 450px;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
     }
 
     /*
@@ -892,9 +894,9 @@ COMMENT FORM STYLES
 
 .comment-respond {}
 
-#reply-title {
-    margin-top: 1em;
-}
+#reply-title {}
+
+.comment-reply-title {} 
 
 .logged-in-as {}
 

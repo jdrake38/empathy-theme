@@ -651,8 +651,8 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     }
 */
 /******************************************************************
-Site Name:
-Author:
+Site Name: Empathy Bytes
+Author: Jaewon Drake
 
 Stylesheet: Grid Stylesheet
 
@@ -828,19 +828,6 @@ more pure CSS Grid interpretation: https://github.com/joshuaiz/grate
     }
   }
 }
-/**
- * 
- * Other CSS Grid examples
- * 
- * You can use these or come up with your own. Once CSS Grid clicks,
- * it's really easy and there's no limit to what you can do!
- * 
- * The main takeaway here is that you don't need a predefined system.
- * Just define a grid, add your columns and rows, and go.
- * 
- * Uncomment to use.
- * 
- * */
 /* Ye Olde Bones Grid
 * Hear Ye, hear ye!
 * This is the old style grid, now commented out
@@ -1410,6 +1397,8 @@ POSTS & CONTENT STYLES
 }
 .entry-content img {
   max-height: 450px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 /* end .entry-content */
 /* index entry content */
@@ -1564,10 +1553,6 @@ COMMENT STYLES
 /**********************
 COMMENT FORM STYLES
 ***********************/
-#reply-title {
-  margin-top: 1em;
-}
-
 /* comment submit button */
 /* comment form title */
 /* cancel comment reply link */

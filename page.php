@@ -16,5 +16,5 @@
 	</div>
 
 	<?php get_sidebar(); ?>
-	
+<br/>	
 <?php get_footer(); ?>
